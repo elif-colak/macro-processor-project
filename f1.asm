@@ -1,0 +1,35 @@
+ PROG          
+ LDAA #3         
+
+ PSHA
+ PSHB
+ LDAA $75
+ LDAB $100
+MULT ASLA
+ SUBB #1
+ BNE MULT
+ STAA $50
+ PULB
+ PULA
+ PSHA
+ LDAA $200
+ ADDA $500
+ STAA $100
+ PULA
+ INCA          
+
+ PSHA
+ PSHB
+ LDAA #1
+ LDAB $500
+ DECB
+REM ASLA
+ INCA
+ DECB
+ BNE REM
+ ANDA $400
+ STAA $300
+ PULB
+ PULA
+ STAA $500         
+ END          
